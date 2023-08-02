@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>San Marimo - Contact Us Form</title>
+<link rel="stylesheet" href="../home/contactstyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+</head>
+<body>
+	<div>
+	<a href="../home/home.html"><img src="../general_images/hotellogo.jpg" class="logo"></a>
+	</div>
+	<div id="sideNav">
+		<nav>
+			<ul>
+				<li><a href="#" target="_blank" rel="noopener noreferrer">Our Rooms</a></li>
+				<li><a href="#" target="_blank" rel="noopener noreferrer">Room Booking</a></li>
+				<li><a href="#" target="_blank" rel="noopener noreferrer">Cuisine</a></li>
+				<li><a href="#" target="_blank" rel="noopener noreferrer">Restaurant Booking</a></li>
+				<li><a href="#" target="_blank" rel="noopener noreferrer">Our Events</a></li>
+				<li><a href="#" target="_blank" rel="noopener noreferrer">Ballroom Booking</a></li>
+				<li><a href="#" target="_blank" rel="noopener noreferrer">Promotions</a></li>
+				<li><a href="C:\Users\wkais\OneDrive\Desktop\KAhotel\hotelcontact\indexcontact.html" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="menuBtn">
+		<img src="openmenu.png" id="menu">
+	</div>
+	<div class="reach">
+	<p>Contact Us</p>
+	<h1>Get In Touch</h1>
+	</div>
+	<div class="contact-wrap">
+		<div class="contact-in">
+			<h1>Contact Info</h1>
+			<h2><i class="fa fa-phone" aria-hidden="true"></i> Phone</h2>
+			<p>+41 031 729 20 57</p>
+			<h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+			<p>sanmarimo@gmail.com</p>
+			<h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+			<p>San Marimo, XXX, Switzerland</p>
+			<ul>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+		<div class="contact-in">
+			<h1>Send a Message</h1>
+			<form>
+				<input type="text" required placeholder="Full Name" class="contact-in-input">
+				<input type="email" id="email" name="email" required placeholder="Email" class="contact-in-input">
+				<input type="text" required placeholder="Subject" class="contact-in-input">
+				<textarea required placeholder="Message" class="contact-in-textarea"></textarea>
+				<input type="submit" value="SUBMIT" class="contact-in-btn">
+			</form>
+		</div>
+		<div class="contact-in">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.331372690871!2d103.84491492554915!3d1.379020157340891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16ea36cc5329%3A0x4878e0d4c68a4dd5!2sNanyang%20Poly!5e0!3m2!1sen!2ssg!4v1684499186019!5m2!1sen!2ssg" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</div>
+
+	<script>
+		var menuBtn = document.getElementById("menuBtn")
+		var sideNav = document.getElementById("sideNav")
+		var menu = document.getElementById("menu")
+	
+	sideNav.style.right = "-250px";
+	
+	menuBtn.onclick = function(){
+		if(sideNav.style.right == "-250px"){
+			sideNav.style.right = "0";
+			menu.src = "closemenu.png";
+		}
+		else{
+			sideNav.style.right = "-250px";
+			menu.src = "openmenu.png";
+		}
+	}
+	</script>
+
+</body>
+</html>
