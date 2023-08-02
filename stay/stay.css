@@ -1,0 +1,17 @@
+.row{
+    display: flex;
+}
+
+.column{
+    flex: 50%;
+}
+
+.contents{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.banner{
+    margin: 0px;
+    padding: 0px;
+}

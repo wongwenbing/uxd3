@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>San Marino: Book Rooms</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://w3schools.com/w3css/4/w3.css" rel="stylesheet">
+        <link href="book.css" rel="stylesheet">
+        <style>
+                body {
+      font-family: "Open Sans", sans-serif;
+    }
+  </style> 
+    </head>
+    <div class="navbar">
+      <link href="../general/navbar.css" rel="css stylesheet">
+        <div class="header">
+            <a href="../home/home.html"><img src="general_images/logoheader.png"></a>
+        </div>
+        <a href="../home/home.html">HOME</a>
+        <a href="../stay/stay.html">STAY</a>
+        <a href="../dining/dining.html">DINING</a>
+        <a href="../events/events.html">EVENTS</a>
+        <a href="../home/find_us.html">FIND US</a>
+        <div class="dropdown">
+            <a href="#" id="dropbtn">BOOK NOW   <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content" style="top: 100%;"> 
+                <a href="../stay/book_rooms.html">BOOK ROOMS</a>
+                <a href="..dining/book_restaurant.html">BOOK RESTAURANT</a>
+            </div>
+        </div> </div>
+
+    <div id="sideNav">
+      <link href="../general/navbar.css" rel="stylesheet">
+      <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+
+        sideNav.style.right = "-250px";
+
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-250px"){
+                sideNav.style.right = "0";
+                menu.src = "../general_images/closemenu.png";
+            }
+            else{
+                sideNav.style.right = "-250px";
+                menu.src = "../general_images/openmenu.png";
+            }
+          }
+
+      </script>
+      <nav>
+          <ul>
+            <li><a href="../home/home.html">HOME</a></li>
+            <li><a href="../stay/stay.html">STAY</a></li>
+            <li><a href="../dining/dining.html">DINING</a></li>
+            <li><a href="../events/events.html">EVENTS</a></li>
+            <li><a href="../home/find_us.html">FIND US</a></li>
+            <li><a href="../stay/book_rooms.html">BOOK ROOMS</a></li>
+            <li><a href="../dining/book_restaurant.html">BOOK RESTAURANT</a></li>
+          </ul>
+      </nav>
+  </div>
+    <br><br><br>    
+    <div class="w3-light-grey">
+      <div class="w3-container w3-orange w3-padding w3-centre" style="width: 60%">Special Requests</div>
+    </div>
+    <div class="w3-container">  
+    <h2>Your Details: </h2> 
+    <p></p>
+    <h3>Accomadation Details</h3>
+        <div class="w3-row">
+          <div class="w3-half">
+            <p>Check-In Dates: <span id='checkindate'></span></p>
+            <p>Check Out Date: <span id='checkoutdate'></span></p>
+          </div>
+          <div class="w3-half">
+            <p>Number of Adults: <span id ='adultnumber'></span></p>
+            <p>Number of Kids: <span id='childnumber'></span></p>
+          </div>
+        </div>
+    <h3>Room Selection</h3>
+      <div class="w3-row">
+        <div class="w3-half">
+          <p>Room Selected: <span id='room_selection'></span></p>
+        </div>
+        <div class="w3-half">
+          <p>Price a Night: <span id='price_night'></span></p>
+        </div>
+      </div>
+    </div>
+    <h2></h2>
+
+
+    <form>
+      <div class="container w3-container">
+      <!--Step 3: Special Steps-->
+        <div class="sr">
+        <fieldset>
+          <h2>Special Requests</h2>
+            <label for="fn">Special Requests </label>
+              <table>
+                <tr>
+                  <td><input type="checkbox" id="xbed" name="xbed" value="Extra Bed">
+                  <label for="xbed">Extra Bed (Indicate the number in the Textbox).</label></td>
+                  <td><input type="checkbox" id="limo" name="limo" value="Airport Limo">
+                  <label for="limo">Airport Transfer (indicate details in the textbox. Our staff will contact you within 5 business days.)</label></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="earlycheckin" name="earlycheckin" value="Early Check-In">
+                  <label for="earlycheckin">Early Check-In (note that additional fees may be incurred)</label></td>
+                  <td><input type="checkbox" id="checkout" name="checkout" value="Late Check-Out">
+                  <label for="checkout">Late Check-Out (note that additional fees may be incurred)</label></td>
+                </tr>
+              </table>
+                  <input type="text" id="fn" name="fn" placeholder="Special Requests"><br>
+                </fieldset>
+              </div>
+              <a href="roomchoice.html" button type="button" class="w3-button prev">Previous</a>
+              <a href="personal.html" button type="button" class="w3-button next">Next</a>
+            </div>
+          
+        </div>
+    </form> 
+
+    <br><br><br>
+
+    <script src="special_details.js"></script>
+
+<!--Footer Below-->
+<footer class="footer">
+  <script src="https://kit.fontawesome.com/cb997be55d.js" crossorigin="anonymous"></script>
+  <link href="footer.css" rel="stylesheet">
+    <div class="footer-container">
+      <div class="footer-row">
+       <div class="footer-col">
+        <h4>SAN MARIMO</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Careers @ San Marimo</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Company Information</a></li>
+         </ul>
+        </div>
+       <div class="footer-col">
+         <h4>Other Links</h4>
+         <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Visitor Services & Amenities</a></li>
+          <li><a href="#">Hotel & Flight Packages</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Sitemap</a></li>
+         </ul>
+        </div>
+        <div class="footer-col">
+          <div class="info-col">
+            <h4>Location</h4>
+             <ul>
+               <li><i class="fa fa-phone" aria-hidden="true"></i> <br> +41 031 729 20 57</li>
+               <li><i class="fa fa-envelope" aria-hidden="true"></i> <br> sanmarimo@gmail.com</li>
+               <li><i class="fa fa-map-marker" aria-hidden="true"></i> <br> San Marimo, XXX, Switzerland</li>
+             </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+           <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+           </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+  
+</html>

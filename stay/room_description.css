@@ -1,0 +1,84 @@
+*{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    padding: 0px 10px;
+}
+
+body{
+    padding: 10px;
+}
+
+.banner {
+    position: relative;
+    z-index:1;
+}
+
+.text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+  }
+
+.banner img {
+    opacity: 0.5;
+}
+
+div.deluxe, div.suite, div.famloft, div.phv{
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+div.deluxe img, div.suite img, div.famloft img, div.phv img{
+    padding: 10px;
+}
+
+h3{
+    text-align: center;
+    font-size: 58px;
+    padding: 0px;
+    margin-bottom: 2px;
+    font-family: cursive;
+}
+
+h4{
+    text-align: center;
+    font-size: 20px;
+    margin-top:1px;
+}
+
+table{
+    width: 100%;
+}
+
+table p{
+    text-align: justify;
+}
+
+.row{
+    display: flex;
+}
+
+.column{
+    width: 50%;
+    padding: 10px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 800px) {
+    .column{
+      width: 100%;
+    }
+    /*both columns are supposed to be stack on top of each other */
+  }
+
+.column ul{
+    padding-left: 10px;
+    
+}

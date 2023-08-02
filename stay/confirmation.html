@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <link href="../general/navbar.css" rel="css stylesheet">
+          <div class="header">
+            <a href="../home/home.html"><img src="../general_images/logoheader.png"></a>
+          </div>
+          <a href="../home/home.html">HOME</a>
+          <a href="../stay/stay.html">STAY</a>
+          <a href="../dining/dining.html">DINING</a>
+          <a href="../events/events.html">EVENTS</a>
+          <a href="../home/find_us.html">FIND US</a>
+          <div class="dropdown">
+              <a href="#" id="dropbtn">BOOK NOW   <i class="fa fa-caret-down"></i></a>
+              <div class="dropdown-content" style="top: 100%;"> 
+                  <a href="../stay/book_rooms.html">BOOK ROOMS</a>
+                  <a href="..dining/book_restaurant.html">BOOK RESTAURANT</a>
+              </div>
+          </div></div>
+
+      <div id="sideNav">
+        <link href="../general/navbar.css" rel="stylesheet">
+        <script>
+          var menuBtn = document.getElementById("menuBtn")
+          var sideNav = document.getElementById("sideNav")
+          var menu = document.getElementById("menu")
+  
+          sideNav.style.right = "-250px";
+  
+          menuBtn.onclick = function(){
+              if(sideNav.style.right == "-250px"){
+                  sideNav.style.right = "0";
+                  menu.src = "../general_images/closemenu.png";
+              }
+              else{
+                  sideNav.style.right = "-250px";
+                  menu.src = "../general_images/openmenu.png";
+              }
+            }
+  
+        </script>
+        <nav>
+            <ul>
+              <li><a href="../home/home.html">HOME</a></li>
+              <li><a href="../stay/stay.html">STAY</a></li>
+              <li><a href="../dining/dining.html">DINING</a></li>
+              <li><a href="../events/events.html">EVENTS</a></li>
+              <li><a href="../home/find_us.html">FIND US</a></li>
+              <li><a href="../stay/book_rooms.html">BOOK ROOMS</a></li>
+              <li><a href="../dining/book_restaurant.html">BOOK RESTAURANT</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <form id="content">
+        <br><br><br>
+        <h1>Thank you for your confirmation!</h1>
+        <h2>Your confirmation number is <span id="num"></span></h2>
+
+        <div class="w3-container">
+            <h3>Accomodation Details</h3>
+            <div class="w3-row">
+              <div class="w3-half">
+                <p>Check-In Dates: <span id='checkindate'></span></p>
+                <p>Check Out Date: <span id='checkoutdate'></span></p>
+              </div>
+              <div class="w3-half">
+                <p>Number of Adults: <span id ='adultnumber'></span></p>
+                <p>Number of Kids: <span id='childnumber'></span></p>
+              </div>
+            </div>
+        <h3>Room Selection</h3>
+          <div class="w3-row">
+            <div class="w3-half">
+              <p>Room Selected: <span id='room_selection'></span></p>
+            </div>
+            <div class="w3-half">
+              <p>Price a Night: <span id='price_night'></span></p>
+            </div>
+          </div>
+        <h3>Special Requests</h3>
+
+        <h3>Personal Details</h3>
+        <p>Name: <span id='fn'></span><span id="ln"></span></p>
+        <p>Conta</p>
+        <p></p>
+        </div>
+
+    </form>
+    <button class="w3-button" id="generate-pdf" onclick="convertHTMLtoPDF()">Print as PDF</button>
+    <script src="confirmation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+       </script>
+       <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+       </script>        </body>
+</html>
