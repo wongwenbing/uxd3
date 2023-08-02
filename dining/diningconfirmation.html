@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="dining_loader.css" rel="stylesheet">
+</head>
+<body>
+  <h1 id="message">Please wait while for your submission to be confirmed...</h1>
+  <div id="loading-spinner" class="loader active">
+      <svg class="circular" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
+  </div>
+  <div id="confirmation-message">
+      <h1>Your booking has been successful</h1>
+      <img src="../dining_images/tickmark.png" class="image">
+      <div>
+        <button class="back-button" onclick="window.location.href='home.html'">Go back to Home Page</button>
+        <button class="back-button" onclick="window.location.href='dining.html'">Go back to Dining Page</button> 
+      </div>    
+  </div>
+
+  <script>
+     document.getElementById('loading-spinner').style.display = 'block';
+      setTimeout(function(){
+        document.getElementById('loading-spinner').style.display = 'none';
+        document.getElementById('message').style.display = 'none';
+        document.getElementById('confirmation-message').style.display = 'block';
+      }, 2000);
+      window.onload = function() {
+  // Hide the confirmation message initially
+  var confirmationMessage = document.getElementById("confirmation-message");
+  confirmationMessage.style.display = "none";
+
+  // Wait 2 seconds
+  setTimeout(function() {
+    // Hide the loader
+    var loader = document.getElementById("loader");
+    loader.style.display = "none";
+
+    // Display the confirmation message
+    confirmationMessage.style.display = "block";
+  }, 2000);
+}
+
+  </script>
+</body>
+</html>

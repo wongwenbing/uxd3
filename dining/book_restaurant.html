@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Form</title>
+    <link href="../general/navbar.css" rel="stylesheet">
+    <link href="../general/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="diningform.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="dining_form.js"></script>
+</head>
+<body>
+    <!-- Navbar-->
+    <div class="navbar">
+        <div class="header">
+            <a href="home.html"><img src="../general_images/logoheader.png"></a>
+        </div>
+        <a href="../home/home.html">HOME</a>
+        <a href="../stay/stay.html">STAY</a>
+        <a href="dining.html">DINING</a>
+        <a href="../events/events.html">EVENTS</a>
+        <a href="../home/find_us.html">FIND US</a>
+        <div class="dropdown">
+            <a href="#" id="dropbtn">BOOK NOW   <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content" style="top: 100%;"> 
+                <a href="../stay/book_rooms.html">BOOK ROOMS</a>
+                <a href="book_restaurant.html">BOOK RESTAURANT</a>
+                <a href="../events/book_ballroom.html">BOOK BALLROOM</a>
+            </div>
+        </div>
+    </div>
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">HOME</a></li>
+                <li><a href="../stay/stay.html">STAY</a></li>
+                <li><a href="dining.html">DINING</a></li>
+                <li><a href="../events/events.html">EVENTS</a></li>
+                <li><a href="../hotelcontact/indexcontact.html">FIND US</a></li>
+                <li><a href="../stay/book_rooms.html">BOOK ROOMS</a></li>
+                <li><a href="book_restaurant.html">BOOK RESTAURANT</a></li>
+                <li><a href="../events/book_ballroom.html">BOOK BALLROOM</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--Form-->
+    <div class="w3-container w3-card-4 w3-padding w3-margin booking-form" id="bookingContainer">
+        <h3>Table Reservation</h3>
+        <form id="bookingForm" onsubmit="handleSubmit(event)">
+            <div id="step1">
+                <label for="type">Which place would you like to book?* </label>
+                <select class="w3-select" id="type" name="type">
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Bar">Bar</option>
+                    <option value="Terraces">Terraces</option>
+                </select>
+                <button type="button" class="w3-button w3-teal w3-margin-top" onclick="changeStep(2, 'next')">Next</button>
+            </div>                
+            <div id="step2" class="hidden">
+                <label for="name">Full Name</label>
+                <input class="w3-input" type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input class="w3-input" type="email" id="email" name="email" required>
+                <label for="phone">Phone Number</label>
+                <input class="w3-input" type="tel" id="phone" name="phone" required>
+                <button type="button" class="w3-button w3-teal w3-margin-top" onclick="changeStep(2, 'prev')">Back</button>
+                <button type="button" class="w3-button w3-teal w3-margin-top" onclick="changeStep(3, 'next')">Next</button>
+            </div>
+
+            <div id="step3" class="hidden">
+                <label for="party-size">Party Size (max. 8pax)</label>
+                <input class="w3-input" type="number" id="party-size" name="party-size" min="1" max="8" required>
+                <label for="date">Date(You can book maximum two weeks in advance)</label>
+                <input class="w3-input" type="date" id="date" name="date" required>
+                <label for="time">Time(Opening time:8am - 11pm)</label>
+                <input class="w3-input" type="time" id="time" name="time" min="8:00:00" max="23:00:00" required>
+                <label for="special-requests">Special Requests</label>
+                <textarea class="w3-input" id="special-requests" name="special-requests"></textarea>
+                <button type="button" class="w3-button w3-teal w3-margin-top" onclick="changeStep(3, 'prev')">Back</button>
+                <input class="w3-input" type="submit" value="Submit">
+            </div>
+        </form>
+        <button class="back-button" onclick="window.location.href='dining.html'">Go back to Dining Page</button>         
+    </div>
+    <!-- Footer-->
+    <footer class="footer">
+        <script src="https://kit.fontawesome.com/cb997be55d.js" crossorigin="anonymous"></script>
+        <link href="../general/footer.css" rel="stylesheet">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>SAN MARIMO</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Careers @ San Marimo</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Company Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Other Links</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Visitor Services & Amenities</a></li>
+                        <li><a href="#">Hotel & Flight Packages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="info-col">
+                        <h4>Location</h4>
+                        <ul>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i> <br> +41 031 729 20 57</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i> <br> sanmarimo@gmail.com</li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> <br> Via Losanna 4, CH-6900 Lugano</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

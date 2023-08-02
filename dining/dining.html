@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining</title>
+    <link href="../general/navbar.css" rel="stylesheet">
+    <link href="../general/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="dining.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="dining.js"></script>
+</head>
+<body>
+    <!-- Nav Bar section-->
+    <div class="navbar">
+        <div class="header">
+            <a href="home.html"><img src="../general_images/logoheader.png"></a>
+        </div>
+        <a href="../home/home.html">HOME</a>
+        <a href="../stay/stay.html">STAY</a>
+        <a href="dining.html">DINING</a>
+        <a href="../events/events.html">EVENTS</a>
+        <a href="../home/find_us.html">FIND US</a>
+        <div class="dropdown">
+            <a href="#" id="dropbtn">BOOK NOW   <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content" style="top: 100%;"> 
+                <a href="book_rooms.html">BOOK ROOMS</a>
+                <a href="book_restaurant.html">BOOK RESTAURANT</a>
+                <a href="book_ballroom.html">BOOK BALLROOM</a>
+            </div>
+        </div>
+    </div>
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">HOME</a></li>
+                <li><a href="../stay/stay.html">STAY</a></li>
+                <li><a href="dining.html">DINING</a></li>
+                <li><a href="../events/events.html">EVENTS</a></li>
+                <li><a href="../hotelcontact/indexcontact.html">FIND US</a></li>
+                <li><a href="book_rooms.html">BOOK ROOMS</a></li>
+                <li><a href="book_restaurant.html">BOOK RESTAURANT</a></li>
+                <li><a href="book_ballroom.html">BOOK BALLROOM</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="../general_images/openmenu.png" id="menu">
+    </div>
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+        
+    sideNav.style.right = "-250px";
+    
+    menuBtn.onclick = function(){
+        if(sideNav.style.right == "-250px"){
+            sideNav.style.right = "0";
+            menu.src = "../general_images/closemenu.png";
+        }
+        else{
+            sideNav.style.right = "-250px";
+            menu.src = "../general_images/openmenu.png";
+        }
+    }
+    </script>
+    <!-- Slideshow-->
+    <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides fade">
+                <img src="../dining_images/backgroundimage.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="../dining_images/backgroundimage2.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="../dining_images/backgroundimage3.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="../dining_images/backgroundimage4.png" style="width: 100%;">
+            </div>
+    </div>
+    <!-- Main-->
+    <main class="w3-container w3-padding-large main_page">
+        <!-- Restaurant section -->
+        <h1 class="w3-container w3-text-orange w3-center title">Alpina Alpine Restaurant</h1>
+        <section class="w3-padding-large w3-light-grey w3-margin-bottom">
+            <div class="w3-row-padding">
+                <div class="w3-col m6 w3-left">
+                    <img src="../dining_images/swiss_cheese.png" class="w3-image">
+                </div>  
+                <div class="w3-col m6">
+                    <p class="w3-text-dark-grey">Enjoy Switzerland's most famous culinary tradition: <i><em>The Swiss Fondue. </em></i> Our specility in the art of swiss fondue and other mouth-watering delicacies , our restaurant will no doubt offer a unforgetablne experience.Our restaurnat proudly serves a wide variety of swiss dishes and drinks to accompany your food.Whether its a romantic dinner for your significant other , or a family lunch , there is no doubt that you will enjoy our delicacies.</p>
+                    <p class="w3-text-dark-grey">Led by our experienced chef, our team is dedicated to providing you with an authentic Swiss dining experience in a cozy, alpine-inspired setting. Our dishes are made with only the finest ingredients, including premium Swiss cheese and locally sourced produce.</p>
+                    <p class="w3-text-dark-grey">Don't just take our word for it, though. Here's what one of our recent guests had to say: "The fondue was absolutely delicious, and the service was impeccable. A must-visit if you're in the area!"</p>
+                    <a href="dining_form.html" class="book-now-btn">Click here to book now></a>
+                </div>
+            </div>
+        </section>        
+        <!-- Bar section -->
+        <h1 class="w3-container w3-text-orange w3-center title">Lounge Bar</h1>
+        <section class="w3-padding-large w3-light-grey w3-margin-bottom">
+            <div class="w3-row-padding">
+                <div class="w3-col m6 w3-right">
+                    <img src="../dining_images/loungue_bar.png" class="w3-image">
+                </div>
+                <div class="w3-col m6">
+                    <p class="w3-text-dark-grey weight">Step into our Lounge Bar for a relaxing ambiance. Enjoy a wide range of refreshing drinks and light snacks, perfectly designed for your casual meet-ups and chill-out moments. If you desire alcohol, we have a wide variety of drinks you can choose from that are made up by the bartender.</p>
+                    <p class="w3-text-dark-grey weight">Choose across a huge range of comforting seats that are each unique. At night, the fireplace will be lighted with a real fire to provide you with a surreal and cozy experience near the fire, especially in the cold climate in the Swiss Alps.</p>
+                    <p class="w3-text-dark-grey weight">Our expert mixologist curates a special cocktail menu each season, focusing on fresh, local ingredients and classic techniques. Whether you're a fan of traditional cocktails or you're looking for something a bit more adventurous, our menu is sure to delight.</p>
+                    <p class="w3-text-dark-grey weight">Customer Review: "The atmosphere at the Lounge Bar is simply unmatched. The drinks were exceptional and the real fire in the fireplace was the cherry on top of a perfect evening."</p>
+                    <a href="../dining_form.html" class="book-now-btn">Click here to book now></a>
+                </div>
+            </div>
+        </section>        
+        <!-- Terrace section -->
+        <h1 class="w3-container w3-text-orange w3-center title">Dining at the sky:Terrace Restaurant</h1>
+        <section class="w3-padding-large w3-light-grey w3-margin-bottom">
+            <div class="w3-row-padding">
+                <div class="w3-col m6 w3-left">
+                    <img src="../dining_images/terraces.png" class="w3-image">
+                </div>
+                <div class="w3-col m6">
+                    <p class="w3-text-dark-grey">Our 25-floor hotel boasts a terrace restaurant at the rooftop, where you can dine with the sun or the moon. Instead of serving heavy dishes, the terrace restaurant serves Swiss desserts and other light delicacies for you to slowly enjoy the food.</p>
+                    <p class="w3-text-dark-grey">At night, you can enjoy the landscape extending from the top of the hotel, even the Swiss Alps, where the buildings down below illuminate the landscape with lights. Our Terrace Restaurant is the perfect place to unwind after a long day, with stunning views that make any dining experience unforgettable.</p>
+                    <p class="w3-text-dark-grey">Customer Review: "Dining at the Terrace Restaurant was an amazing experience! The view is breathtaking and the desserts were absolutely delicious. A must-visit if you're staying at the hotel!"</p>
+                </div>
+            </div>
+        </section>        
+        </section>  
+        <!-- Staff section-->
+        <h1 class="w3-container w3-text-orange w3-center title">Meet our Staff</h1>
+        <div class="wrapper">
+            <div class="box-area">
+                <div class="box">
+                    <img alt="Executive Chef" src="../dining_images/executive_chef.png">
+                    <div class="overlay">
+                        <h1>Martin</h1>
+                        <h3>Executive Chef</h3>
+                        <p>Meet Martin, our Executive Chef, a culinary whose sole passion is to cook up high-quality products to fulfill your taste buds</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img alt="Bartender" src="../dining_images/bartender.png">
+                    <div class="overlay">
+                        <h1>Julian</h1>
+                        <h3>Head bartender</h3>
+                        <p>Introducing Julian, our skilled bartender who concocts amazing drinks with creativity and style. Enjoy his unique and flavorful cocktails that are a perfect blend of passion and expertise.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img alt="Manager" src="../dining_images/manager.png">
+                    <div class="overlay">
+                        <h1>Steve</h1>
+                        <h3>Restaurant manager</h3>
+                        <p>Welcome Steve, our adept Restaurant Manager. His exceptional leadership skills and meticulous attention to detail ensure a seamless dining experience for all patrons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main> 
+    <!-- Footer section-->
+    <footer class="footer">
+        <script src="https://kit.fontawesome.com/cb997be55d.js" crossorigin="anonymous"></script>
+        <link href="/css/footer.css" rel="stylesheet">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>SAN MARIMO</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Careers @ San Marimo</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Company Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Other Links</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Visitor Services & Amenities</a></li>
+                        <li><a href="#">Hotel & Flight Packages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="info-col">
+                        <h4>Location</h4>
+                        <ul>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i> <br> +41 031 729 20 57</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i> <br> sanmarimo@gmail.com</li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> <br> Via Losanna 4, CH-6900 Lugano</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
